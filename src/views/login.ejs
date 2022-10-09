@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <section class="side">
+        <img src="./img/img.svg" alt="">
+    </section> -->
+    <section class="main">
+        <div class="login-container">
+            <p class="title">Welcome Muzaffar</p>
+            <div class="separator"></div>
+            <!-- <p class="welcome-message">Please, provide login credential to proceed and have access to all our services</p> -->
+            <div>
+                <% if(errors != "") { %>
+                    <% errors.forEach((item) => { %>
+                        <div class="alert alert-danger">
+                            <%- item %>
+                        </div>
+                    <% }); %>
+                <% } %>
+            </div>
+            <form method="POST" action="/login" class="login-form">
+                <div class="form-control">
+                    <!-- <label for="email">Email address:</label> -->
+                    <input type="email" id="email" name="email"  placeholder="Enter email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-control">
+                    <!-- <label for="password">Password:</label> -->
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="submit">Log in</button>
+            </form>
+            <!-- <hr>
+            <div>
+                If you haven't had an account. <a href="/register">Create a new account</a>.
+            </div> -->
+        </div>
+    </section>
+</body>
+</html>
