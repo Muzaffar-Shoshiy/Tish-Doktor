@@ -552,7 +552,6 @@ const doctors = new WizardScene(
 const type = new WizardScene(
   'type',
   async (ctx) => {
-    await ctx.replyWithChatAction('typing')
     await bot.telegram.sendMessage(ctx.chat.id, `Siz kimsiz?`, {
       reply_markup: {
         keyboard: [
@@ -570,7 +569,6 @@ const type = new WizardScene(
 const typeru = new WizardScene(
     'typeru',
     async (ctx) => {
-      await ctx.replyWithChatAction('typing')
       await bot.telegram.sendMessage(ctx.chat.id, `Кто вы?`, {
         reply_markup: {
           keyboard: [
